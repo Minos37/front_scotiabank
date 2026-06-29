@@ -1,6 +1,6 @@
 # Core Financiero — Portal del Personal (Banco Scotiabank)
 
-Front-end en **React + Vite** para la fuerza de ventas / asesores de Banco Andino.
+Front-end en **React + Vite** para la fuerza de ventas / asesores de Banco Scotiabank.
 Consume el backend **Core Mobile (FastAPI)** del proyecto
 `back_core_mobile_banco_andino_fastapi` (puerto **8003**).
 
