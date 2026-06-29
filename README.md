@@ -1,4 +1,4 @@
-# Core Financiero — Portal del Personal (Banco Andino)
+# Core Financiero — Portal del Personal (Banco Scotiabank)
 
 Front-end en **React + Vite** para la fuerza de ventas / asesores de Banco Andino.
 Consume el backend **Core Mobile (FastAPI)** del proyecto
