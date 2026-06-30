@@ -147,7 +147,7 @@ export default function ComitePage() {
                       {s.cliente_nombre}
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 8, fontSize: 12, color: 'var(--hb-muted)' }}>
-                      <span>Monto: <strong>S/ {s.monto_solicitado.toLocaleString('es-PE', { minimumFractionDigits: 2 })}</strong></span>
+                      <span>Monto: <strong><Money value={s.monto_solicitado || s.monto} /></strong></span>
                       <span>Plazo: <strong>{s.plazo_meses} meses</strong></span>
                     </div>
                   </button>

@@ -2,10 +2,10 @@
 
 Front-end en **React + Vite** para la fuerza de ventas / asesores de Banco Scotiabank.
 Consume el backend **Core Mobile (FastAPI)** del proyecto
-`back_core_mobile_banco_andino_fastapi` (puerto **8003**).
+`back_core_mobile_scotiabank_fastapi` (puerto **8003**).
 
 > Sistema interno · uso exclusivo del personal. El portal del **cliente**
-> (Banca por Internet) es un proyecto aparte (`banco_andino_banking_front_react`, puerto 5174).
+> (Banca por Internet) es un proyecto aparte (`scotiabank_banking_front_react`, puerto 5174).
 
 ## Puesta en marcha
 
@@ -33,7 +33,7 @@ El backend autentica por `codigo_empleado` + `password`; el campo de login se
 muestra como **Número de DNI** según el diseño del portal.
 
 ## Requisitos
-- Backend `back_core_mobile_banco_andino_fastapi` corriendo en `http://localhost:8003`
+- Backend `back_core_mobile_scotiabank_fastapi` corriendo en `http://localhost:8003`
   (`uvicorn main:app --reload --port 8003`) con el seed aplicado
   (`python -m scripts.seed_bd_core_mobile`).
 - Node.js 18+.
@@ -53,9 +53,7 @@ muestra como **Número de DNI** según el diseño del portal.
 | Reportes | Productividad mensual por asesor | `GET /reportes/productividad` |
 
 ## Identidad de marca
-Paleta del textil andino (rojo `#e2132b`, magenta, naranja, amarillo, turquesa,
-verde, morado), isotipo de la **flor andina** y franja tejida. Las variables de
-color viven en `src/index.css` (`--hb-*`).
+Paleta institucional de Scotiabank (rojo corporativo `#E52229`, blanco, y tonos oscuros), integrando el logotipo oficial del banco. Las variables de color viven en `src/index.css` (`--hb-*`).
 
 ## Estructura
 
@@ -63,7 +61,7 @@ color viven en `src/index.css` (`--hb-*`).
 src/
   main.jsx                 punto de entrada (Router + AuthProvider)
   App.jsx                  rutas públicas/privadas
-  index.css                tema Banco Andino + estilos del portal
+  index.css                tema Scotiabank + estilos del portal
   context/AuthContext.jsx  sesión del asesor (JWT en localStorage)
   services/
     api.js                 axios central (Bearer + manejo de 401)
@@ -93,8 +91,8 @@ Para publicar la página web en internet usando **Vercel**:
 1. Sube tu código (carpeta frontend) a un repositorio de **GitHub**.
 2. Ingresa a [Vercel](https://vercel.com/) e inicia sesión con GitHub.
 3. Haz clic en **Add New Project** y selecciona tu repositorio.
-4. En la sección de **Environment Variables**, añade la variable de tu backend en Koyeb:
-   - Name: `VITE_API_URL`
-   - Value: `https://mi-banco-api.koyeb.app` *(reemplaza con tu URL real de Koyeb)*
+4. En la sección de **Environment Variables**, añade la variable de tu backend en Railway:
+   - Name: `VITE_BASE_URL`
+   - Value: `https://mi-banco-api.up.railway.app` *(reemplaza con tu URL real de Railway)*
 5. Haz clic en **Deploy**.
-6. ¡Listo! Vercel te dará una URL pública como `mi-portal-andino.vercel.app` para que accedas desde cualquier dispositivo.
+6. ¡Listo! Vercel te dará una URL pública como `mi-portal-scotiabank.vercel.app` para que accedas desde cualquier dispositivo.

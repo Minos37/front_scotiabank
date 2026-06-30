@@ -108,7 +108,7 @@ export default function SolicitudesPage() {
                   <tr key={s.id}>
                     <td><strong>{s.numero_expediente}</strong></td>
                     <td>{s.cliente_nombre}</td>
-                    <td className="num"><Money value={s.monto_solicitado} /></td>
+                    <td className="num"><Money value={s.monto_solicitado || s.monto} /></td>
                     <td className="num">{s.monto_aprobado ? <Money value={s.monto_aprobado} /> : '—'}</td>
                     <td><Badge estado={s.estado} /></td>
                     <td>{formatDate(s.created_at)}</td>
